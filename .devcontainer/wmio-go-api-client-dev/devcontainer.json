@@ -5,6 +5,7 @@
       "extensions": [
         "eamodio.gitlens",
         "golang.go",
+        "joaoacdias.golang-tdd",
         "hediet.vscode-drawio",
         "mhutchie.git-graph",
         "oderwat.indent-rainbow",

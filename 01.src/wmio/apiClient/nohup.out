@@ -1,0 +1,4 @@
+using module mode; GOMOD=/workspaces/wmio-go-api-client/01.src/wmio/apiClient/go.mod
+go: no module dependencies to download
+using module mode; GOMOD=/workspaces/wmio-go-api-client/01.src/wmio/apiClient/go.mod
+go: no module dependencies to download

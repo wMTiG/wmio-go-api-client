@@ -21,7 +21,12 @@ RUN apk update --no-cache \
 
 COPY --from=golang-image /usr/local/go/ /usr/local/go/
 ENV PATH="${PATH}:/usr/local/go/bin"
+RUN wget -O- -nv https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s v1.58.1 
 
 USER ${__uname}
 
-RUN go install -v github.com/go-delve/delve/cmd/dlv@latest
+RUN go install -v github.com/go-delve/delve/cmd/dlv@latest \
+    && go install golang.org/x/tools/cmd/godoc@latest \
+    && go install golang.org/x/tools/gopls@latest \
+    && go install honnef.co/go/tools/cmd/staticcheck@latest
+ENV PATH="${PATH}:/home/${__uname}/go/bin/"

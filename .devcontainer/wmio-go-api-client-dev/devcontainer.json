@@ -1,0 +1,18 @@
+{
+  "build": { "dockerfile": "Dockerfile" },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "eamodio.gitlens",
+        "golang.go",
+        "hediet.vscode-drawio",
+        "mhutchie.git-graph",
+        "oderwat.indent-rainbow",
+        "yzhang.markdown-all-in-one"
+      ]
+    }
+  },
+  "mounts": [
+    "source=${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+  ]
+}

@@ -1,1 +1,1 @@
-# wmio-go-api-client
+# webmethods.io Go API client
